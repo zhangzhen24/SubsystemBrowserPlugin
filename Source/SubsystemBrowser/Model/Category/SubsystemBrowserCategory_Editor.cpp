@@ -22,6 +22,6 @@ void FSubsystemCategory_Editor::Select(UWorld* InContext, TArray<UObject*>& OutD
 {
 	if (GEditor)
 	{
-		return OutData.Append(GEditor->GetEditorSubsystemArray<UEditorSubsystem>());
+		return OutData.Append(GEditor->GetEditorSubsystemArrayCopy<UEditorSubsystem>());
 	}
 }

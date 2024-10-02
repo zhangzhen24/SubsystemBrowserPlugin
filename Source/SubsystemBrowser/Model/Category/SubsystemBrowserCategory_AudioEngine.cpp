@@ -29,7 +29,7 @@ void FSubsystemCategory_AudioEngine::Select(UWorld* InContext, TArray<UObject*>&
 		FAudioDeviceHandle AudioDeviceHandle = InContext->GetAudioDevice();
 		if (AudioDeviceHandle.IsValid())
 		{
-			OutData.Append(AudioDeviceHandle->GetSubsystemArray<UAudioEngineSubsystem>());
+			OutData.Append(AudioDeviceHandle->GetSubsystemArrayCopy<UAudioEngineSubsystem>());
 		}
 	}
 }

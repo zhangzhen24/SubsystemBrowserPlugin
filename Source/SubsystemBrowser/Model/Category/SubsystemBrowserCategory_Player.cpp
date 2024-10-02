@@ -26,7 +26,7 @@ void FSubsystemCategory_Player::Select(UWorld* InContext, TArray<UObject*>& OutD
 	{
 		for (ULocalPlayer* const LocalPlayer : InContext->GetGameInstance()->GetLocalPlayers())
 		{
-			OutData.Append(LocalPlayer->GetSubsystemArray<ULocalPlayerSubsystem>());
+			OutData.Append(LocalPlayer->GetSubsystemArrayCopy<ULocalPlayerSubsystem>());
 		}
 	}
 }

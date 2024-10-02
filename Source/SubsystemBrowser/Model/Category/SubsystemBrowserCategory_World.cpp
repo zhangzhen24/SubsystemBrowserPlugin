@@ -22,6 +22,6 @@ void FSubsystemCategory_World::Select(UWorld* InContext, TArray<UObject*>& OutDa
 {
 	if (IsValid(InContext))
 	{
-		OutData.Append(InContext->GetSubsystemArray<UWorldSubsystem>());
+		OutData.Append(InContext->GetSubsystemArrayCopy<UWorldSubsystem>());
 	}
 }

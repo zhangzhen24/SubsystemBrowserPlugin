@@ -22,6 +22,6 @@ void FSubsystemCategory_Engine::Select(UWorld* InContext, TArray<UObject*>& OutD
 {
 	if (GEngine)
 	{
-		return OutData.Append(GEngine->GetEngineSubsystemArray<UEngineSubsystem>());
+		return OutData.Append(GEngine->GetEngineSubsystemArrayCopy<UEngineSubsystem>());
 	}
 }

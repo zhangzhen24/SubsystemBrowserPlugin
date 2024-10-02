@@ -23,6 +23,6 @@ void FSubsystemCategory_GameInstance::Select(UWorld* InContext, TArray<UObject*>
 {
 	if (IsValid(InContext) && InContext->GetGameInstance())
 	{
-		OutData.Append(InContext->GetGameInstance()->GetSubsystemArray<UGameInstanceSubsystem>());
+		OutData.Append(InContext->GetGameInstance()->GetSubsystemArrayCopy<UGameInstanceSubsystem>());
 	}
 }
